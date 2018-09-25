@@ -51,7 +51,7 @@ use Symfony\Component\Console\Output\OutputInterface;
         $io->newLine();
         $io->text([
             '歌曲：' . $song->fsong,
-            '专辑：' . $song->albumName_hilight,
+            '专辑：' . strip_tags($song->albumName_hilight),
             '歌手：' . $song->fsinger,
         ]);
 
